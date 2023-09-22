@@ -16,7 +16,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className='flex w-full h-[80px] justify-center'>
+          <div className='flex items-center justify-between w-[1000px] px-12'>
+          <div>
+            <h1>Logo</h1>
+          </div>
+          <div>
+            <nav className='hidden sm:block font-bold'>
+              <ul className='flex cursor-pointer'>
+                <li className='py-2 px-4 flex items-center justify-center mx-4 rounded-lg hover:outline hover:outline-offset-1 hover:bg-black/10 hover:outline-black/30 hover:outline-2 active:bg-black/20'>Home</li>
+                <li className='py-2 px-4 flex items-center justify-center mx-4 rounded-lg hover:outline hover:outline-offset-1 hover:bg-black/10 hover:outline-black/30 hover:outline-2 active:bg-black/20'>About</li>
+                <li className='py-2 px-4 flex items-center justify-center mx-4 rounded-lg hover:outline hover:outline-offset-1 hover:bg-black/10 hover:outline-black/30 hover:outline-2 active:bg-black/20'>Contact</li>
+              </ul>
+            </nav>
+            <div className='w-10 h-10 sm:hidden block rounded-lg hover:outline hover:outline-black/30 hover:outline hover:outline-offset-1 hover:bg-black/10 cursor-pointer active:bg-black/20'></div>
+          </div>
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
